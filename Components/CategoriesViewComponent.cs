@@ -18,7 +18,7 @@ namespace Bookstore.Components
 
         public IViewComponentResult Invoke()
         {
-            ViewBag.SelectedCategory = RouteData?.Values["bootCategory"];
+            ViewBag.SelectedCategory = RouteData?.Values["bookCategory"];
 
             var categories = repo.Books
                 .Select(x => x.Category)
