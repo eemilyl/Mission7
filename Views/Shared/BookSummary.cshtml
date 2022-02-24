@@ -21,6 +21,7 @@
     <div class="card-text p-1">ISBN: @Model.Isbn</div>
 
     <form method="post" asp-page="/Buy">
+        <input type="hidden" asp-for="@Model.BookId" />
         <span class="card-text">
             <button type="submit" class="btn btn-success btn-sm float-end">Buy</button>
         </span>
