@@ -37,6 +37,7 @@ namespace Bookstore.Models
         public string Country { get; set; }
 
         [BindNever]
-        public bool Shipped { get; set; }
+        public bool PaymentReceived { get; set; }
+
     }
 }
