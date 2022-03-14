@@ -35,8 +35,7 @@ namespace Bookstore
            });
 
             services.AddDbContext<AppIdentityDBContext>(options =>
-            
-                options.UseSqlite(Configuration["ConnectionStrings: IdentityConnection"]));
+                options.UseSqlite(Configuration["ConnectionStrings:IdentityConnection"]));
 
             services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<AppIdentityDBContext>();
