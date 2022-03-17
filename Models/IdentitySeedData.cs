@@ -11,6 +11,7 @@ namespace Bookstore.Models
 {
     public static class IdentitySeedData
     {
+        //username and password to get into admin
         private const string adminUser = "Admin";
         private const string adminPassword = "413ExtraYeetPeriod(t)!";
 
@@ -24,7 +25,7 @@ namespace Bookstore.Models
             {
                 context.Database.Migrate();
             }
-
+            
             UserManager<IdentityUser> userManager = app.ApplicationServices
                 .CreateScope().ServiceProvider
                 .GetRequiredService<UserManager<IdentityUser>>();

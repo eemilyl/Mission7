@@ -21,21 +21,47 @@
     <div class="m-1 p-1">
         <div class="text-danger" asp-validation-summary="All"></div>
 
-        <form method="post" asp-controller="Account" asp-action="Login">
+        <div class="col-md-6 col-lg-4 offset-lg-4 offset-md-3 mt-5">
+            <div class="bg-light p-5 border shadow">
+                <!-- Mission 11 Extra Bootstrap Requirement: I made the Login Form look a little nicer by changing the div classes to mb-4,
+                    which changes the margin bottom. I also added placeholders to display before the user types in their password and username.
+                    I also added p tags that tell the user to enter a username and password.-->
+                <form method="post" asp-controller="Account" asp-action="Login">
+                    <div class="mb-4">
+                        <input asp-for="Username" class="form-control" placeholder="Username">
+                        <p class="form-text text-end">Enter Valid Username</p>
+                    </div>
+                    <div class="mb-4">
+                        <input asp-for="Password" type="password" class="form-control" placeholder="Enter Password">
+                        <p class="form-text text-end">Enter Valid Password</p>
+                    </div>
+                  
+                    <button type="submit" class="btn btn-primary w-100 my-3 shadow">Login</button>
+                    
+
+                    <input type="hidden" asp-for="ReturnUrl" />
+                </form>
+                
+                <!-- Login Form -->
+            </div>
+        </div>
+
+        <!--Old -->
+        @*<form method="post" asp-controller="Account" asp-action="Login">
             <div class="form-group">
                 <label asp-for="Username">User Name:</label>
-                <input asp-for="Username"  class="form-control"/>
+                <input asp-for="Username" class="form-control" />
             </div>
 
             <div class="form-group">
                 <label asp-for="Password">Password:</label>
-                <input asp-for="Password" class="form-control" type="password"/>
+                <input asp-for="Password" class="form-control" type="password" />
             </div>
 
             <button class="btn btn-primary" type="submit">Log In</button>
 
             <input type="hidden" asp-for="ReturnUrl" />
-        </form>
+        </form>*@
     </div>
 </body>
 </html>
